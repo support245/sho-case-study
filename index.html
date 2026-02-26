@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+<title>Lead Gen Case Study | Offshore Manufacturing Firm</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root{
+  --bg:#ffffff;
+  --text:#0f172a;
+  --muted:#475569;
+  --subtle:#94a3b8;
+  --border:#e5e7eb;
+  --accent:#f59e0b;
+  --heading:#0b2a5b;
+  --ctaNavy:#0a2d66;
+  --link:#1f4ea3;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.5;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ====== MAIN CONTAINER ====== */
+.shell {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 15px 10px 15px;
+  text-align: center;
+}
+
+/* ====== HERO SECTION ====== */
+.hero {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.hero-toggle {
+  width: 100%;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.hero-frame {
+  border: 1px solid var(--border);
+  overflow: hidden;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(100%) contrast(1.05);
+  transition: filter 0.3s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .hero-toggle:hover .hero-img {
+    filter: grayscale(0%);
+  }
+}
+
+.hero-toggle:active .hero-img,
+.hero-toggle.active .hero-img {
+  filter: grayscale(0%);
+}
+
+/* ====== TYPOGRAPHY ====== */
+.kicker {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+h1 {
+  margin: 0 0 8px 0;
+  font-size: 32px;
+  color: var(--heading);
+  text-transform: uppercase;
+  line-height: 1.2;
+  word-break: break-word;
+}
+
+.subtitle {
+  color: var(--link);
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.summary {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto 20px auto;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.5;
+  padding: 0 5px;
+}
+
+.summary strong {
+  font-weight: 700;
+}
+
+.divider {
+  border-top: 1px solid var(--border);
+  margin: 20px auto;
+  width: 80%;
+  max-width: 800px;
+}
+
+/* ====== KPI ROW ====== */
+.kpis {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+.kpis > div {
+  width: 100%;
+  max-width: 200px;
+  text-align: center;
+  background: #f8fafc;
+  padding: 12px 5px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.kpi-label {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--subtle);
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.kpi-value {
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--heading);
+  line-height: 1.2;
+}
+
+/* ====== STORY SECTION ====== */
+.story {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.story-item {
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f1f5f9;
+  width: 100%;
+}
+
+.story-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.story-title {
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--heading);
+  margin-bottom: 8px;
+}
+
+.story p {
+  color: var(--muted);
+  font-size: 15px;
+  margin: 0 0 15px 0;
+  line-height: 1.5;
+  width: 100%;
+}
+
+.story strong {
+  font-weight: 700;
+  color: var(--heading);
+}
+
+.result-callout {
+  border-left: 4px solid var(--accent);
+  padding: 15px;
+  background: #f8fafc;
+  margin: 15px 0;
+  border-radius: 0 4px 4px 0;
+  font-size: 15px;
+  width: 100%;
+}
+
+.quote {
+  margin: 20px 0 15px 0;
+  font-style: italic;
+  color: #475569;
+  font-size: 15px;
+  padding-left: 15px;
+  border-left: 2px solid var(--border);
+}
+
+/* ====== CTA ====== */
+.cta-bar {
+  margin-top: 20px;
+  background: var(--ctaNavy);
+  border-radius: 8px;
+  width: 100%;
+}
+
+.cta-bar a {
+  display: block;
+  padding: 15px;
+  text-align: center;
+  color: #fff;
+  font-weight: 900;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 15px;
+  width: 100%;
+}
+</style>
+</head>
+
+<body>
+
+<main class="shell">
+
+<div class="hero">
+  <button class="hero-toggle" id="shoneyHeroToggle" type="button">
+    <div class="hero-frame">
+      <img src="shoney-hero-color.jpg" class="hero-img" alt="Offshore manufacturing lead generation hero image">
+    </div>
+  </button>
+</div>
+
+<div class="kicker">Lead Gen</div>
+<h1>Offshore Manufacturing Firm</h1>
+<div class="subtitle">B2B Lead Generation Engine</div>
+
+<p class="summary">
+  From inconsistent referrals to a predictable client acquisition machine. <strong>4,653+ leads</strong> generated through a repeatable outbound system, supported by disciplined follow-up and qualification over <strong>7+ years</strong>.
+</p>
+
+<div class="divider"></div>
+
+<div class="kpis">
+  <div>
+    <div class="kpi-label">Leads Generated</div>
+    <div class="kpi-value">4,653+</div>
+  </div>
+  <div>
+    <div class="kpi-label">Appointments</div>
+    <div class="kpi-value">1,230+</div>
+  </div>
+  <div>
+    <div class="kpi-label">Consistency</div>
+    <div class="kpi-value">7+ Years</div>
+  </div>
+</div>
+
+<section class="story">
+
+  <div class="story-item">
+    <div class="story-title">The Problem</div>
+    <p>
+      They were excellent at delivery, but growth was inconsistent. Relying on referrals and word-of-mouth meant revenue was tied to luck.
+      They needed a predictable system that put qualified buyers in front of them every week.
+    </p>
+  </div>
+
+  <div class="story-item">
+    <div class="story-title">The Mechanism</div>
+
+    <p><strong>The "Offshore Advantage" Pivot</strong><br>
+      We repositioned offshore capabilities as a strategic advantage, not a cost-cutting measure. The offer emphasized risk reduction,
+      scalability, and speed while keeping positioning simple and buyer-friendly.
+    </p>
+
+    <p><strong>The "Decision-Maker" Dragnet</strong><br>
+      We built a multi-channel outreach engine designed to bypass gatekeepers and reach senior decision-makers directly.
+      No ads. Tight targeting. Consistent outreach and follow-up.
+    </p>
+  </div>
+
+  <div class="story-item">
+    <div class="story-title">The Result</div>
+
+    <div class="result-callout">
+      A 7+ year streak of consistent growth. They went from wondering where the next deal would come from to managing
+      a steady pipeline of <strong>1,230+ high-value appointments</strong>, powered by <strong>4,653+ leads</strong>.
+    </div>
+
+    <p class="quote">
+      "This wasn't just marketing. It forced us to level up our entire operation."
+    </p>
+
+    <div class="cta-bar">
+      <a href="https://www.lucid-strategy.com/contact">Get These Results</a>
+    </div>
+  </div>
+
+</section>
+
+</main>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const toggleBtn = document.getElementById('shoneyHeroToggle');
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', function(){
+      this.classList.toggle('active');
+    });
+  }
+});
+</script>
+
+</body>
+</html>
